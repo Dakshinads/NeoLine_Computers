@@ -43,6 +43,7 @@ namespace NeoLine_Computers
             this.dgvcol_contactno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvcol_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvcol_username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,6 +142,7 @@ namespace NeoLine_Computers
             this.btn_addNew.TabIndex = 2;
             this.btn_addNew.Text = "Add New";
             this.btn_addNew.UseVisualStyleBackColor = false;
+            this.btn_addNew.Click += new System.EventHandler(this.btn_addNew_Click);
             // 
             // dgvcol_nic
             // 
@@ -198,10 +200,26 @@ namespace NeoLine_Computers
             this.dgvcol_username.Name = "dgvcol_username";
             this.dgvcol_username.ReadOnly = true;
             // 
+            // btn_refresh
+            // 
+            this.btn_refresh.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_refresh.BackgroundImage = global::NeoLine_Computers.Properties.Resources.update1;
+            this.btn_refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_refresh.FlatAppearance.BorderSize = 0;
+            this.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_refresh.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_refresh.Location = new System.Drawing.Point(137, 749);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(30, 30);
+            this.btn_refresh.TabIndex = 3;
+            this.btn_refresh.UseVisualStyleBackColor = false;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            // 
             // UsersControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
+            this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.btn_addNew);
             this.Controls.Add(this.dgv_users);
             this.Controls.Add(this.label1);
@@ -226,5 +244,6 @@ namespace NeoLine_Computers
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvcol_contactno;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvcol_email;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvcol_username;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }

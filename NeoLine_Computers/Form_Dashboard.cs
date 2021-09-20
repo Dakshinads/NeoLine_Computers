@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace NeoLine_Computers
 {
@@ -15,16 +16,22 @@ namespace NeoLine_Computers
         private bool dragging = false;
         private Point startPoint = new Point(0, 0);
         string username;
-        string password;
+        string userrole;
+        string nic;
+
+        MySqlConnection con;
+        DBConnection dbConnect = new DBConnection();
 
         ToolTip toolTip = new ToolTip();
         
 
-        public Form_Dashboard(string userName, string userRole)
+        public Form_Dashboard(string nic, string userName, string userRole)
         {
             InitializeComponent();
+            con = dbConnect.getConn();
             this.username = userName;
-            this.password = userRole;
+            this.userrole = userRole;
+            this.nic = nic;
             lbl_welcome.Text = "Welcome "+username  ;
             popAlert("Welcome " + userName, Alert.enmType.Success);
             btn_profileSetting.Location = new Point(lbl_welcome.Location.X+lbl_welcome.Width,6);
@@ -42,9 +49,16 @@ namespace NeoLine_Computers
 
         private void button1_Click(object sender, EventArgs e)
         {
-            login_form log = new login_form();
-            log.Show();
-            this.Close();
+            ConfirmationPopup confirm = new ConfirmationPopup("Do you want to Logout ?");
+            DialogResult dr=confirm.ShowDialog();
+            if(dr== DialogResult.Yes)
+            {
+                login_form log = new login_form();
+                log.Show();
+                this.Close();
+            }
+            confirm.Dispose();
+            
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
@@ -133,12 +147,55 @@ namespace NeoLine_Computers
 
         private void btn_adminPanel_Click(object sender, EventArgs e)
         {
-           /* pnl_active.Height = btn_adminPanel.Height;
-            pnl_active.Top = btn_adminPanel.Top;*/
-            Form_AdminPanel adp = new Form_AdminPanel();
-            adp.Show();
+            if (userrole == "Admin")
+            {
+                Form_AdminPanel adp = new Form_AdminPanel();
+                adp.Show();
+            }
+            else
+            {
+                popAlert("You cannot access to admin panel", Alert.enmType.Delete);
+            }
+           
             // view admin panel
         }
 
+        public void btn_profileSetting_Click(object sender, EventArgs e)
+        {
+            try{
+                string query = "SELECT * from user WHERE nic='"+ this.nic + "'";
+                MySqlDataReader reader;
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                con.Open();
+                reader = cmd.ExecuteReader();
+
+                String nic="", name = "", dob = "", address = "", userrole = "", email = "", username = "";
+                int contactno=0;
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        nic = reader["NIC"].ToString();
+                        name = reader["Name"].ToString();
+                        dob = reader["DOB"].ToString();
+                        address = reader["Address"].ToString();
+                        userrole = reader["User_Role"].ToString();
+                        contactno = Convert.ToInt32(reader["Contact_No"]);
+                        email = reader["Email"].ToString();
+                        username = reader["Username"].ToString();
+
+                    }
+                    con.Close();
+                    UserReg userg = new UserReg(3, nic, name, dob, address, userrole, contactno, email, username);
+                    userg.Show();
+                    
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

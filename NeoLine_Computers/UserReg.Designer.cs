@@ -63,7 +63,6 @@ namespace NeoLine_Computers
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_formname = new System.Windows.Forms.Label();
             this.btn_close = new System.Windows.Forms.Button();
@@ -88,7 +87,6 @@ namespace NeoLine_Computers
             this.label9 = new System.Windows.Forms.Label();
             this.txt_confirmPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btn_action = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btn_cancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -336,6 +334,7 @@ namespace NeoLine_Computers
             this.date_dob.BorderColor = System.Drawing.Color.Silver;
             this.date_dob.BorderRadius = 1;
             this.date_dob.Color = System.Drawing.Color.Silver;
+            this.date_dob.CustomFormat = "yyyy-MM-dd";
             this.date_dob.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.date_dob.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.date_dob.DisabledColor = System.Drawing.Color.Gray;
@@ -345,6 +344,7 @@ namespace NeoLine_Computers
             this.date_dob.FillDatePicker = false;
             this.date_dob.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_dob.ForeColor = System.Drawing.Color.Black;
+            this.date_dob.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.date_dob.Icon = ((System.Drawing.Image)(resources.GetObject("date_dob.Icon")));
             this.date_dob.IconColor = System.Drawing.Color.Gray;
             this.date_dob.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
@@ -663,7 +663,7 @@ namespace NeoLine_Computers
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_password.OnIdleState = stateProperties24;
             this.txt_password.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_password.PasswordChar = '\0';
+            this.txt_password.PasswordChar = '*';
             this.txt_password.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_password.PlaceholderText = "";
             this.txt_password.ReadOnly = false;
@@ -840,7 +840,7 @@ namespace NeoLine_Computers
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_confirmPassword.OnIdleState = stateProperties32;
             this.txt_confirmPassword.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_confirmPassword.PasswordChar = '\0';
+            this.txt_confirmPassword.PasswordChar = '*';
             this.txt_confirmPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_confirmPassword.PlaceholderText = "";
             this.txt_confirmPassword.ReadOnly = false;
@@ -909,7 +909,7 @@ namespace NeoLine_Computers
             this.btn_action.IdleIconLeftImage = null;
             this.btn_action.IdleIconRightImage = null;
             this.btn_action.IndicateFocus = false;
-            this.btn_action.Location = new System.Drawing.Point(57, 645);
+            this.btn_action.Location = new System.Drawing.Point(221, 648);
             this.btn_action.Name = "btn_action";
             this.btn_action.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_action.OnDisabledState.BorderRadius = 1;
@@ -950,103 +950,12 @@ namespace NeoLine_Computers
             this.btn_action.TextMarginLeft = 0;
             this.btn_action.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_action.UseDefaultRadiusAndThickness = true;
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.AllowAnimations = true;
-            this.btn_cancel.AllowMouseEffects = true;
-            this.btn_cancel.AllowToggling = false;
-            this.btn_cancel.AnimationSpeed = 200;
-            this.btn_cancel.AutoGenerateColors = false;
-            this.btn_cancel.AutoRoundBorders = false;
-            this.btn_cancel.AutoSizeLeftIcon = true;
-            this.btn_cancel.AutoSizeRightIcon = true;
-            this.btn_cancel.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cancel.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btn_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancel.BackgroundImage")));
-            this.btn_cancel.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_cancel.ButtonText = "Cancel";
-            this.btn_cancel.ButtonTextMarginLeft = 0;
-            this.btn_cancel.ColorContrastOnClick = 45;
-            this.btn_cancel.ColorContrastOnHover = 45;
-            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btn_cancel.CustomizableEdges = borderEdges2;
-            this.btn_cancel.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_cancel.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_cancel.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btn_cancel.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btn_cancel.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btn_cancel.Font = new System.Drawing.Font("Segoe UI", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.IconLeft = null;
-            this.btn_cancel.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cancel.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btn_cancel.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btn_cancel.IconMarginLeft = 11;
-            this.btn_cancel.IconPadding = 10;
-            this.btn_cancel.IconRight = null;
-            this.btn_cancel.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_cancel.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btn_cancel.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btn_cancel.IconSize = 25;
-            this.btn_cancel.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btn_cancel.IdleBorderRadius = 0;
-            this.btn_cancel.IdleBorderThickness = 0;
-            this.btn_cancel.IdleFillColor = System.Drawing.Color.Empty;
-            this.btn_cancel.IdleIconLeftImage = null;
-            this.btn_cancel.IdleIconRightImage = null;
-            this.btn_cancel.IndicateFocus = false;
-            this.btn_cancel.Location = new System.Drawing.Point(399, 645);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_cancel.OnDisabledState.BorderRadius = 1;
-            this.btn_cancel.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_cancel.OnDisabledState.BorderThickness = 1;
-            this.btn_cancel.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn_cancel.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_cancel.OnDisabledState.IconLeftImage = null;
-            this.btn_cancel.OnDisabledState.IconRightImage = null;
-            this.btn_cancel.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btn_cancel.onHoverState.BorderRadius = 1;
-            this.btn_cancel.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_cancel.onHoverState.BorderThickness = 1;
-            this.btn_cancel.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btn_cancel.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.onHoverState.IconLeftImage = null;
-            this.btn_cancel.onHoverState.IconRightImage = null;
-            this.btn_cancel.OnIdleState.BorderColor = System.Drawing.Color.Gray;
-            this.btn_cancel.OnIdleState.BorderRadius = 1;
-            this.btn_cancel.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_cancel.OnIdleState.BorderThickness = 1;
-            this.btn_cancel.OnIdleState.FillColor = System.Drawing.Color.Gray;
-            this.btn_cancel.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.OnIdleState.IconLeftImage = null;
-            this.btn_cancel.OnIdleState.IconRightImage = null;
-            this.btn_cancel.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_cancel.OnPressedState.BorderRadius = 1;
-            this.btn_cancel.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_cancel.OnPressedState.BorderThickness = 1;
-            this.btn_cancel.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_cancel.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.OnPressedState.IconLeftImage = null;
-            this.btn_cancel.OnPressedState.IconRightImage = null;
-            this.btn_cancel.Size = new System.Drawing.Size(201, 44);
-            this.btn_cancel.TabIndex = 12;
-            this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_cancel.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_cancel.TextMarginLeft = 0;
-            this.btn_cancel.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btn_cancel.UseDefaultRadiusAndThickness = true;
+            this.btn_action.Click += new System.EventHandler(this.btn_action_Click);
             // 
             // UserReg
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(657, 716);
-            this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_action);
             this.Controls.Add(this.txt_confirmPassword);
             this.Controls.Add(this.txt_password);
@@ -1108,6 +1017,5 @@ namespace NeoLine_Computers
         private System.Windows.Forms.Label label9;
         private Bunifu.UI.WinForms.BunifuTextBox txt_confirmPassword;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_action;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_cancel;
     }
 }

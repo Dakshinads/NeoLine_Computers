@@ -229,6 +229,7 @@ namespace NeoLine_Computers
             this.btn_profileSetting.Size = new System.Drawing.Size(40, 40);
             this.btn_profileSetting.TabIndex = 2;
             this.btn_profileSetting.UseVisualStyleBackColor = false;
+            this.btn_profileSetting.Click += new System.EventHandler(this.btn_profileSetting_Click);
             this.btn_profileSetting.MouseHover += new System.EventHandler(this.btn_profileSetting_MouseHover);
             // 
             // btn_minimize

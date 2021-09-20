@@ -10,6 +10,7 @@ namespace NeoLine_Computers
     {
         string userName;
         string userRole;
+        string nic;
         public UserDetails()
         {
 
@@ -32,6 +33,15 @@ namespace NeoLine_Computers
         public string getUserRole()
         {
             return userRole;
+        }
+
+        public void setnic(string nic)
+        {
+            this.nic = nic;
+        }
+        public string getnic()
+        {
+            return nic;
         }
     }
 }

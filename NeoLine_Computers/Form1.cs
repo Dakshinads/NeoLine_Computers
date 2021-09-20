@@ -72,25 +72,27 @@ namespace NeoLine_Computers
                     string password = md5.getMD5(txt_password.Text);
                    
                     
-                    string query = "SELECT User_Role from user WHERE Username ='" + username + "' AND Password ='" + password + "'";
+                    string query = "SELECT NIC,User_Role from user WHERE Username ='" + username + "' AND Password ='" + password + "'";
                     MySqlDataReader reader;
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     con.Open();
                     reader = cmd.ExecuteReader();                    
                     string role="";
+                    String nic = "";
 
                     if (reader.HasRows)
                     {
                         while (reader.Read())
                         {
+                            nic = reader["NIC"].ToString();
                             role = reader["User_Role"].ToString();
                         }
                         UserDetails userD = new UserDetails();
                         userD.setUserName(username);
                         userD.setUserRole(role);
-
+                        userD.setnic(nic);
                         
-                        Form_Dashboard dashboard = new Form_Dashboard(userD.getUserName(), userD.getUserRole());
+                        Form_Dashboard dashboard = new Form_Dashboard(userD.getnic(),userD.getUserName(), userD.getUserRole());
                         dashboard.Show();
                         this.Hide();
                     }
@@ -107,7 +109,7 @@ namespace NeoLine_Computers
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message) ;
             }
         }
 
