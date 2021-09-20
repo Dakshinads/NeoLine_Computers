@@ -38,17 +38,17 @@ namespace NeoLine_Computers
             this.label1.Font = new System.Drawing.Font("Century Gothic", 13.74545F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(23, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 26);
+            this.label1.Size = new System.Drawing.Size(125, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dashboard";
             // 
-            // Dashboard
+            // DashboardControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
-            this.Name = "Dashboard";
-            this.Size = new System.Drawing.Size(1309, 791);
+            this.Name = "DashboardControl";
+            this.Size = new System.Drawing.Size(1377, 791);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -38,7 +38,7 @@ namespace NeoLine_Computers
             this.label1.Font = new System.Drawing.Font("Century Gothic", 13.74545F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(23, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 26);
+            this.label1.Size = new System.Drawing.Size(39, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Bill";
             // 
@@ -48,7 +48,7 @@ namespace NeoLine_Computers
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Name = "BillControl";
-            this.Size = new System.Drawing.Size(1309, 791);
+            this.Size = new System.Drawing.Size(1377, 791);
             this.ResumeLayout(false);
             this.PerformLayout();
 

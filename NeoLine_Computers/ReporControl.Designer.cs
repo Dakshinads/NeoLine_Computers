@@ -48,7 +48,7 @@ namespace NeoLine_Computers
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Name = "ReporControl";
-            this.Size = new System.Drawing.Size(1309, 791);
+            this.Size = new System.Drawing.Size(1377, 791);
             this.ResumeLayout(false);
             this.PerformLayout();
 

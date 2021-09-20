@@ -46,16 +46,10 @@ namespace NeoLine_Computers
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.billControl1 = new NeoLine_Computers.BillControl();
-            this.dashboardControl1 = new NeoLine_Computers.DashboardControl();
-            this.stockControl1 = new NeoLine_Computers.StockControl();
-            this.warrantyCheckerControl1 = new NeoLine_Computers.WarrantyCheckerControl();
-            this.reporControl1 = new NeoLine_Computers.ReporControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -217,7 +211,7 @@ namespace NeoLine_Computers
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(232, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1309, 53);
+            this.panel2.Size = new System.Drawing.Size(1377, 53);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
@@ -244,7 +238,7 @@ namespace NeoLine_Computers
             this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_minimize.FlatAppearance.BorderSize = 0;
             this.btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_minimize.Location = new System.Drawing.Point(1231, 12);
+            this.btn_minimize.Location = new System.Drawing.Point(1301, 12);
             this.btn_minimize.Name = "btn_minimize";
             this.btn_minimize.Size = new System.Drawing.Size(30, 30);
             this.btn_minimize.TabIndex = 2;
@@ -259,7 +253,7 @@ namespace NeoLine_Computers
             this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_close.FlatAppearance.BorderSize = 0;
             this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_close.Location = new System.Drawing.Point(1267, 12);
+            this.btn_close.Location = new System.Drawing.Point(1337, 12);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(30, 30);
             this.btn_close.TabIndex = 1;
@@ -285,7 +279,7 @@ namespace NeoLine_Computers
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(232, 844);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1309, 38);
+            this.panel3.Size = new System.Drawing.Size(1377, 38);
             this.panel3.TabIndex = 2;
             // 
             // label6
@@ -301,58 +295,18 @@ namespace NeoLine_Computers
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.reporControl1);
-            this.panel4.Controls.Add(this.warrantyCheckerControl1);
-            this.panel4.Controls.Add(this.stockControl1);
-            this.panel4.Controls.Add(this.dashboardControl1);
-            this.panel4.Controls.Add(this.billControl1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(232, 53);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1309, 791);
+            this.panel4.Size = new System.Drawing.Size(1377, 791);
             this.panel4.TabIndex = 3;
-            // 
-            // billControl1
-            // 
-            this.billControl1.Location = new System.Drawing.Point(0, -1);
-            this.billControl1.Name = "billControl1";
-            this.billControl1.Size = new System.Drawing.Size(1309, 791);
-            this.billControl1.TabIndex = 0;
-            // 
-            // dashboardControl1
-            // 
-            this.dashboardControl1.Location = new System.Drawing.Point(0, 0);
-            this.dashboardControl1.Name = "dashboardControl1";
-            this.dashboardControl1.Size = new System.Drawing.Size(1309, 791);
-            this.dashboardControl1.TabIndex = 1;
-            // 
-            // stockControl1
-            // 
-            this.stockControl1.Location = new System.Drawing.Point(0, 0);
-            this.stockControl1.Name = "stockControl1";
-            this.stockControl1.Size = new System.Drawing.Size(1309, 791);
-            this.stockControl1.TabIndex = 2;
-            // 
-            // warrantyCheckerControl1
-            // 
-            this.warrantyCheckerControl1.Location = new System.Drawing.Point(0, 0);
-            this.warrantyCheckerControl1.Name = "warrantyCheckerControl1";
-            this.warrantyCheckerControl1.Size = new System.Drawing.Size(1309, 791);
-            this.warrantyCheckerControl1.TabIndex = 3;
-            // 
-            // reporControl1
-            // 
-            this.reporControl1.Location = new System.Drawing.Point(0, 0);
-            this.reporControl1.Name = "reporControl1";
-            this.reporControl1.Size = new System.Drawing.Size(1309, 791);
-            this.reporControl1.TabIndex = 4;
             // 
             // Form_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1541, 882);
+            this.ClientSize = new System.Drawing.Size(1609, 882);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -368,7 +322,6 @@ namespace NeoLine_Computers
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -392,10 +345,5 @@ namespace NeoLine_Computers
         private System.Windows.Forms.Button btn_profileSetting;
         private System.Windows.Forms.Panel pnl_active;
         private System.Windows.Forms.Panel panel4;
-        private ReporControl reporControl1;
-        private WarrantyCheckerControl warrantyCheckerControl1;
-        private StockControl stockControl1;
-        private DashboardControl dashboardControl1;
-        private BillControl billControl1;
     }
 }

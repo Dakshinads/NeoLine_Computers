@@ -177,6 +177,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AdminPanel.Designer.cs">
+      <DependentUpon>Form_AdminPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,18 @@
       <DependentUpon>StockControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserDetails.cs" />
+    <Compile Include="UserReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserReg.Designer.cs">
+      <DependentUpon>UserReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsersControl.Designer.cs">
+      <DependentUpon>UsersControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="WarrantyCheckerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -222,6 +240,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_AdminPanel.resx">
+      <DependentUpon>Form_AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Dashboard.resx">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +257,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StockControl.resx">
       <DependentUpon>StockControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserReg.resx">
+      <DependentUpon>UserReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersControl.resx">
+      <DependentUpon>UsersControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WarrantyCheckerControl.resx">
       <DependentUpon>WarrantyCheckerControl.cs</DependentUpon>
@@ -319,6 +346,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NeoLineComputer_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accounting_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
