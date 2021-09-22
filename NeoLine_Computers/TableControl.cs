@@ -28,6 +28,10 @@ namespace NeoLine_Computers
             {
                 loadItemGrid();
             }
+            else if (tabControl1.SelectedTab == tabControl1.TabPages["tab_Supplier"])
+            {
+                loadSupplierGrid();
+            }
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,7 +46,7 @@ namespace NeoLine_Computers
             }
             if (tabControl1.SelectedTab == tabControl1.TabPages["tab_Supplier"])
             {
-                MessageBox.Show("supplier");
+                refreshGridS();
             }
         }
 
@@ -153,6 +157,57 @@ namespace NeoLine_Computers
             }           
         }
 
+        private void loadSupplierGrid()
+        {
+            try
+            {
+                string query = "SELECT Supplier_ID, Name, Email, Contact_No, Remark FROM supplier ";
+                MySqlDataReader reader;
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                con.Open();
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        dgv_supplier.Rows.Add(
+                           reader["Supplier_ID"].ToString(),
+                           reader["Name"].ToString(),
+                           reader["Email"].ToString(),
+                           reader["Contact_No"].ToString(),
+                           reader["Remark"].ToString()
+                           );
+                    }
+
+                    DataGridViewButtonColumn btn_updates = new DataGridViewButtonColumn();
+                    dgv_supplier.Columns.Add(btn_updates);
+                    btn_updates.HeaderText = "";
+                    btn_updates.Text = "Update";
+                    btn_updates.Name = "btn_update";
+                    btn_updates.FlatStyle = FlatStyle.Flat;
+                    btn_updates.UseColumnTextForButtonValue = true;
+
+                    DataGridViewButtonColumn btn_deletes = new DataGridViewButtonColumn();
+                    dgv_supplier.Columns.Add(btn_deletes);
+                    btn_deletes.HeaderText = "";
+                    btn_deletes.Text = "Delete";
+                    btn_deletes.Name = "btn_delete";
+                    btn_deletes.FlatStyle = FlatStyle.Flat;
+                    btn_deletes.UseColumnTextForButtonValue = true;
+                }
+                else
+                {
+                    popAlert("No Data", Alert.enmType.Info);
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
         private void dgv_Category_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 3)
@@ -202,6 +257,30 @@ namespace NeoLine_Computers
             }
         }
 
+        private void dgv_supplier_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                SupReg supr = new SupReg(2, Convert.ToInt32(dgv_supplier.Rows[e.RowIndex].Cells[0].Value),
+                    dgv_supplier.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                    dgv_supplier.Rows[e.RowIndex].Cells[2].Value.ToString(),
+                    Convert.ToInt32(dgv_supplier.Rows[e.RowIndex].Cells[3].Value.ToString()),
+                    dgv_supplier.Rows[e.RowIndex].Cells[4].Value.ToString()
+                    );
+                supr.Show();
+            }
+            else if (e.ColumnIndex == 6)
+            {
+                ConfirmationPopup confirm = new ConfirmationPopup("Do you want to delete name = " + dgv_supplier.Rows[e.RowIndex].Cells[1].Value.ToString() + " ?");
+                DialogResult dr = confirm.ShowDialog();
+                if (dr == DialogResult.Yes)
+                {
+                    delete(dgv_supplier.Rows[e.RowIndex].Cells[0].Value.ToString(), "supplier", "Supplier_ID");
+                }
+                confirm.Dispose();
+            }
+        }
+
 
         private void btn_addNewC_Click(object sender, EventArgs e)
         {
@@ -215,9 +294,25 @@ namespace NeoLine_Computers
             itemr.Show();
         }
 
+        private void btn_addNewS_Click(object sender, EventArgs e)
+        {
+            SupReg supr = new SupReg(1);
+            supr.Show();
+        }
+
         private void btn_refreshC_Click(object sender, EventArgs e)
         {
             refreshGridC();
+        }
+
+        private void btn_refereshI_Click(object sender, EventArgs e)
+        {
+            refreshGridI();
+        }
+
+        private void btn_refreshS_Click(object sender, EventArgs e)
+        {
+            refreshGridS();
         }
 
         public void delete(string id, string tableName, string columnName)
@@ -241,6 +336,10 @@ namespace NeoLine_Computers
                 else if (tableName == "item")
                 {
                     refreshGridI();
+                }
+                else if (tableName == "supplier")
+                {
+                    refreshGridS();
                 }
             }
             catch (Exception ex)
@@ -267,6 +366,17 @@ namespace NeoLine_Computers
                 dgv_Item.Columns.RemoveAt(7);
             }
             loadItemGrid();
+        }
+
+        public void refreshGridS()
+        {
+            dgv_supplier.Rows.Clear();
+            if (dgv_supplier.ColumnCount > 5)
+            {
+                dgv_supplier.Columns.RemoveAt(6);
+                dgv_supplier.Columns.RemoveAt(5);
+            }
+            loadSupplierGrid();
         }
 
         private void txt_search_KeyUp(object sender, KeyEventArgs e)
@@ -331,11 +441,6 @@ namespace NeoLine_Computers
         private void btn_clearsearch_Click(object sender, EventArgs e)
         {
             txt_search.Text = "";
-            refreshGridI();
-        }
-
-        private void btn_refereshI_Click(object sender, EventArgs e)
-        {
             refreshGridI();
         }
     }

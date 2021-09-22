@@ -227,6 +227,12 @@
     <Compile Include="StockControl.Designer.cs">
       <DependentUpon>StockControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupReg.Designer.cs">
+      <DependentUpon>SupReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="TableControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -290,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StockControl.resx">
       <DependentUpon>StockControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupReg.resx">
+      <DependentUpon>SupReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TableControl.resx">
       <DependentUpon>TableControl.cs</DependentUpon>

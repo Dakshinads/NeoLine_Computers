@@ -29,31 +29,34 @@ namespace NeoLine_Computers
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableControl));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_Category = new System.Windows.Forms.TabPage();
+            this.btn_refreshC = new System.Windows.Forms.Button();
             this.btn_addNewC = new System.Windows.Forms.Button();
             this.dgv_Category = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.dgvC_catid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvC_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvC_description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_Item = new System.Windows.Forms.TabPage();
+            this.btn_refereshI = new System.Windows.Forms.Button();
+            this.btn_clearsearch = new System.Windows.Forms.Button();
             this.btn_addNewI = new System.Windows.Forms.Button();
             this.dgv_Item = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tab_Supplier = new System.Windows.Forms.TabPage();
-            this.btn_clearsearch = new System.Windows.Forms.Button();
             this.dgvI_itemid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvI_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvI_description = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,14 +64,24 @@ namespace NeoLine_Computers
             this.dgvI_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvI_warrantyperiod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvI_catname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_refreshC = new System.Windows.Forms.Button();
-            this.btn_refereshI = new System.Windows.Forms.Button();
             this.txt_search = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tab_Supplier = new System.Windows.Forms.TabPage();
+            this.btn_refreshS = new System.Windows.Forms.Button();
+            this.btn_addNewS = new System.Windows.Forms.Button();
+            this.dgv_supplier = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.dgvs_supplierid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvs_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvs_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvs_contactno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvs_remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tab_Category.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Category)).BeginInit();
             this.tab_Item.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Item)).BeginInit();
+            this.tab_Supplier.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_supplier)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -108,6 +121,21 @@ namespace NeoLine_Computers
             this.tab_Category.Text = "Category";
             this.tab_Category.UseVisualStyleBackColor = true;
             // 
+            // btn_refreshC
+            // 
+            this.btn_refreshC.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_refreshC.BackgroundImage = global::NeoLine_Computers.Properties.Resources.update1;
+            this.btn_refreshC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_refreshC.FlatAppearance.BorderSize = 0;
+            this.btn_refreshC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_refreshC.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_refreshC.Location = new System.Drawing.Point(147, 636);
+            this.btn_refreshC.Name = "btn_refreshC";
+            this.btn_refreshC.Size = new System.Drawing.Size(30, 30);
+            this.btn_refreshC.TabIndex = 5;
+            this.btn_refreshC.UseVisualStyleBackColor = false;
+            this.btn_refreshC.Click += new System.EventHandler(this.btn_refreshC_Click);
+            // 
             // btn_addNewC
             // 
             this.btn_addNewC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(132)))), ((int)(((byte)(232)))));
@@ -127,21 +155,21 @@ namespace NeoLine_Computers
             this.dgv_Category.AllowCustomTheming = false;
             this.dgv_Category.AllowUserToAddRows = false;
             this.dgv_Category.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.dgv_Category.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            this.dgv_Category.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             this.dgv_Category.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Category.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Category.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_Category.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dgv_Category.ColumnHeadersHeight = 40;
             this.dgv_Category.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvC_catid,
@@ -165,14 +193,14 @@ namespace NeoLine_Computers
             this.dgv_Category.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_Category.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgv_Category.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Category.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Category.DefaultCellStyle = dataGridViewCellStyle24;
             this.dgv_Category.EnableHeadersVisualStyles = false;
             this.dgv_Category.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgv_Category.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -227,6 +255,35 @@ namespace NeoLine_Computers
             this.tab_Item.Text = "Item";
             this.tab_Item.UseVisualStyleBackColor = true;
             // 
+            // btn_refereshI
+            // 
+            this.btn_refereshI.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_refereshI.BackgroundImage = global::NeoLine_Computers.Properties.Resources.update1;
+            this.btn_refereshI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_refereshI.FlatAppearance.BorderSize = 0;
+            this.btn_refereshI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_refereshI.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_refereshI.Location = new System.Drawing.Point(145, 635);
+            this.btn_refereshI.Name = "btn_refereshI";
+            this.btn_refereshI.Size = new System.Drawing.Size(30, 30);
+            this.btn_refereshI.TabIndex = 7;
+            this.btn_refereshI.UseVisualStyleBackColor = false;
+            this.btn_refereshI.Click += new System.EventHandler(this.btn_refereshI_Click);
+            // 
+            // btn_clearsearch
+            // 
+            this.btn_clearsearch.BackColor = System.Drawing.Color.Silver;
+            this.btn_clearsearch.FlatAppearance.BorderSize = 0;
+            this.btn_clearsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clearsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clearsearch.Location = new System.Drawing.Point(795, 28);
+            this.btn_clearsearch.Name = "btn_clearsearch";
+            this.btn_clearsearch.Size = new System.Drawing.Size(105, 36);
+            this.btn_clearsearch.TabIndex = 6;
+            this.btn_clearsearch.Text = "Clear";
+            this.btn_clearsearch.UseVisualStyleBackColor = false;
+            this.btn_clearsearch.Click += new System.EventHandler(this.btn_clearsearch_Click);
+            // 
             // btn_addNewI
             // 
             this.btn_addNewI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(132)))), ((int)(((byte)(232)))));
@@ -246,21 +303,21 @@ namespace NeoLine_Computers
             this.dgv_Item.AllowCustomTheming = false;
             this.dgv_Item.AllowUserToAddRows = false;
             this.dgv_Item.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dgv_Item.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
+            this.dgv_Item.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dgv_Item.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Item.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Item.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_Item.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Item.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Item.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dgv_Item.ColumnHeadersHeight = 40;
             this.dgv_Item.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvI_itemid,
@@ -288,14 +345,14 @@ namespace NeoLine_Computers
             this.dgv_Item.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_Item.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgv_Item.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Item.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Item.DefaultCellStyle = dataGridViewCellStyle27;
             this.dgv_Item.EnableHeadersVisualStyles = false;
             this.dgv_Item.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgv_Item.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -312,40 +369,6 @@ namespace NeoLine_Computers
             this.dgv_Item.TabIndex = 2;
             this.dgv_Item.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_Item.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Item_CellContentClick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(407, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Item name:";
-            // 
-            // tab_Supplier
-            // 
-            this.tab_Supplier.Location = new System.Drawing.Point(4, 31);
-            this.tab_Supplier.Name = "tab_Supplier";
-            this.tab_Supplier.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Supplier.Size = new System.Drawing.Size(1333, 680);
-            this.tab_Supplier.TabIndex = 2;
-            this.tab_Supplier.Text = "Supplier";
-            this.tab_Supplier.UseVisualStyleBackColor = true;
-            // 
-            // btn_clearsearch
-            // 
-            this.btn_clearsearch.BackColor = System.Drawing.Color.Silver;
-            this.btn_clearsearch.FlatAppearance.BorderSize = 0;
-            this.btn_clearsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_clearsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clearsearch.Location = new System.Drawing.Point(795, 28);
-            this.btn_clearsearch.Name = "btn_clearsearch";
-            this.btn_clearsearch.Size = new System.Drawing.Size(105, 36);
-            this.btn_clearsearch.TabIndex = 6;
-            this.btn_clearsearch.Text = "Clear";
-            this.btn_clearsearch.UseVisualStyleBackColor = false;
-            this.btn_clearsearch.Click += new System.EventHandler(this.btn_clearsearch_Click);
             // 
             // dgvI_itemid
             // 
@@ -396,36 +419,6 @@ namespace NeoLine_Computers
             this.dgvI_catname.Name = "dgvI_catname";
             this.dgvI_catname.ReadOnly = true;
             // 
-            // btn_refreshC
-            // 
-            this.btn_refreshC.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_refreshC.BackgroundImage = global::NeoLine_Computers.Properties.Resources.update1;
-            this.btn_refreshC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_refreshC.FlatAppearance.BorderSize = 0;
-            this.btn_refreshC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_refreshC.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.btn_refreshC.Location = new System.Drawing.Point(147, 636);
-            this.btn_refreshC.Name = "btn_refreshC";
-            this.btn_refreshC.Size = new System.Drawing.Size(30, 30);
-            this.btn_refreshC.TabIndex = 5;
-            this.btn_refreshC.UseVisualStyleBackColor = false;
-            this.btn_refreshC.Click += new System.EventHandler(this.btn_refreshC_Click);
-            // 
-            // btn_refereshI
-            // 
-            this.btn_refereshI.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_refereshI.BackgroundImage = global::NeoLine_Computers.Properties.Resources.update1;
-            this.btn_refereshI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_refereshI.FlatAppearance.BorderSize = 0;
-            this.btn_refereshI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_refereshI.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.btn_refereshI.Location = new System.Drawing.Point(145, 635);
-            this.btn_refereshI.Name = "btn_refereshI";
-            this.btn_refereshI.Size = new System.Drawing.Size(30, 30);
-            this.btn_refereshI.TabIndex = 7;
-            this.btn_refereshI.UseVisualStyleBackColor = false;
-            this.btn_refereshI.Click += new System.EventHandler(this.btn_refereshI_Click);
-            // 
             // txt_search
             // 
             this.txt_search.AcceptsReturn = false;
@@ -460,26 +453,26 @@ namespace NeoLine_Computers
             this.txt_search.Modified = false;
             this.txt_search.Multiline = false;
             this.txt_search.Name = "txt_search";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_search.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_search.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_search.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_search.OnIdleState = stateProperties8;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_search.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_search.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_search.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_search.OnIdleState = stateProperties12;
             this.txt_search.Padding = new System.Windows.Forms.Padding(3);
             this.txt_search.PasswordChar = '\0';
             this.txt_search.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -502,6 +495,163 @@ namespace NeoLine_Computers
             this.txt_search.WordWrap = true;
             this.txt_search.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_search_KeyUp);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(407, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Item name:";
+            // 
+            // tab_Supplier
+            // 
+            this.tab_Supplier.Controls.Add(this.btn_refreshS);
+            this.tab_Supplier.Controls.Add(this.btn_addNewS);
+            this.tab_Supplier.Controls.Add(this.dgv_supplier);
+            this.tab_Supplier.Location = new System.Drawing.Point(4, 31);
+            this.tab_Supplier.Name = "tab_Supplier";
+            this.tab_Supplier.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Supplier.Size = new System.Drawing.Size(1333, 680);
+            this.tab_Supplier.TabIndex = 2;
+            this.tab_Supplier.Text = "Supplier";
+            this.tab_Supplier.UseVisualStyleBackColor = true;
+            // 
+            // btn_refreshS
+            // 
+            this.btn_refreshS.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_refreshS.BackgroundImage = global::NeoLine_Computers.Properties.Resources.update1;
+            this.btn_refreshS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_refreshS.FlatAppearance.BorderSize = 0;
+            this.btn_refreshS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_refreshS.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_refreshS.Location = new System.Drawing.Point(145, 626);
+            this.btn_refreshS.Name = "btn_refreshS";
+            this.btn_refreshS.Size = new System.Drawing.Size(30, 30);
+            this.btn_refreshS.TabIndex = 8;
+            this.btn_refreshS.UseVisualStyleBackColor = false;
+            this.btn_refreshS.Click += new System.EventHandler(this.btn_refreshS_Click);
+            // 
+            // btn_addNewS
+            // 
+            this.btn_addNewS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(132)))), ((int)(((byte)(232)))));
+            this.btn_addNewS.FlatAppearance.BorderSize = 0;
+            this.btn_addNewS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addNewS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addNewS.Location = new System.Drawing.Point(20, 622);
+            this.btn_addNewS.Name = "btn_addNewS";
+            this.btn_addNewS.Size = new System.Drawing.Size(105, 36);
+            this.btn_addNewS.TabIndex = 7;
+            this.btn_addNewS.Text = "Add New";
+            this.btn_addNewS.UseVisualStyleBackColor = false;
+            this.btn_addNewS.Click += new System.EventHandler(this.btn_addNewS_Click);
+            // 
+            // dgv_supplier
+            // 
+            this.dgv_supplier.AllowCustomTheming = false;
+            this.dgv_supplier.AllowUserToAddRows = false;
+            this.dgv_supplier.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            this.dgv_supplier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            this.dgv_supplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_supplier.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_supplier.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_supplier.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_supplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.dgv_supplier.ColumnHeadersHeight = 40;
+            this.dgv_supplier.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvs_supplierid,
+            this.dgvs_name,
+            this.dgvs_email,
+            this.dgvs_contactno,
+            this.dgvs_remark});
+            this.dgv_supplier.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgv_supplier.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgv_supplier.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv_supplier.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgv_supplier.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_supplier.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgv_supplier.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgv_supplier.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgv_supplier.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgv_supplier.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_supplier.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgv_supplier.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_supplier.CurrentTheme.Name = null;
+            this.dgv_supplier.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_supplier.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgv_supplier.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv_supplier.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgv_supplier.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_supplier.DefaultCellStyle = dataGridViewCellStyle21;
+            this.dgv_supplier.EnableHeadersVisualStyles = false;
+            this.dgv_supplier.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgv_supplier.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgv_supplier.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgv_supplier.HeaderForeColor = System.Drawing.Color.White;
+            this.dgv_supplier.Location = new System.Drawing.Point(20, 22);
+            this.dgv_supplier.Name = "dgv_supplier";
+            this.dgv_supplier.ReadOnly = true;
+            this.dgv_supplier.RowHeadersVisible = false;
+            this.dgv_supplier.RowHeadersWidth = 47;
+            this.dgv_supplier.RowTemplate.Height = 40;
+            this.dgv_supplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_supplier.Size = new System.Drawing.Size(1293, 592);
+            this.dgv_supplier.TabIndex = 6;
+            this.dgv_supplier.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgv_supplier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_supplier_CellContentClick);
+            // 
+            // dgvs_supplierid
+            // 
+            this.dgvs_supplierid.HeaderText = "Supplier ID";
+            this.dgvs_supplierid.MinimumWidth = 6;
+            this.dgvs_supplierid.Name = "dgvs_supplierid";
+            this.dgvs_supplierid.ReadOnly = true;
+            // 
+            // dgvs_name
+            // 
+            this.dgvs_name.HeaderText = "Name";
+            this.dgvs_name.MinimumWidth = 6;
+            this.dgvs_name.Name = "dgvs_name";
+            this.dgvs_name.ReadOnly = true;
+            // 
+            // dgvs_email
+            // 
+            this.dgvs_email.HeaderText = "Email";
+            this.dgvs_email.MinimumWidth = 6;
+            this.dgvs_email.Name = "dgvs_email";
+            this.dgvs_email.ReadOnly = true;
+            // 
+            // dgvs_contactno
+            // 
+            this.dgvs_contactno.HeaderText = "Contact No";
+            this.dgvs_contactno.MinimumWidth = 6;
+            this.dgvs_contactno.Name = "dgvs_contactno";
+            this.dgvs_contactno.ReadOnly = true;
+            // 
+            // dgvs_remark
+            // 
+            this.dgvs_remark.HeaderText = "Remark";
+            this.dgvs_remark.MinimumWidth = 6;
+            this.dgvs_remark.Name = "dgvs_remark";
+            this.dgvs_remark.ReadOnly = true;
+            // 
             // TableControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -515,6 +665,8 @@ namespace NeoLine_Computers
             this.tab_Item.ResumeLayout(false);
             this.tab_Item.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Item)).EndInit();
+            this.tab_Supplier.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_supplier)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,5 +698,13 @@ namespace NeoLine_Computers
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvI_price;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvI_warrantyperiod;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvI_catname;
+        private System.Windows.Forms.Button btn_refreshS;
+        private System.Windows.Forms.Button btn_addNewS;
+        private Bunifu.UI.WinForms.BunifuDataGridView dgv_supplier;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvs_supplierid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvs_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvs_email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvs_contactno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvs_remark;
     }
 }
