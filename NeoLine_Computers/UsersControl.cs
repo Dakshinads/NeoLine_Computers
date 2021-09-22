@@ -30,49 +30,56 @@ namespace NeoLine_Computers
 
         public void loadgrid()
         {
-            
-            string query = "SELECT NIC, Name, DOB, Address, User_Role,Contact_No, Email, Username from user ";
-            MySqlDataReader reader;
-            MySqlCommand cmd = new MySqlCommand(query, con);
-            con.Open();
-            reader = cmd.ExecuteReader();
-            if (reader.HasRows)
+            try
             {
-                while (reader.Read())
-                { 
-                    dgv_users.Rows.Add(
-                       reader["NIC"].ToString(),
-                       reader["Name"].ToString(),
-                       reader["DOB"].ToString(),
-                       reader["Address"].ToString(),
-                       reader["User_Role"].ToString(),
-                       reader["Contact_No"].ToString(),
-                       reader["Email"].ToString(),
-                       reader["Username"].ToString()
-                       );
+                string query = "SELECT NIC, Name, DOB, Address, User_Role,Contact_No, Email, Username from user ";
+                MySqlDataReader reader;
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                con.Open();
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        dgv_users.Rows.Add(
+                           reader["NIC"].ToString(),
+                           reader["Name"].ToString(),
+                           reader["DOB"].ToString(),
+                           reader["Address"].ToString(),
+                           reader["User_Role"].ToString(),
+                           reader["Contact_No"].ToString(),
+                           reader["Email"].ToString(),
+                           reader["Username"].ToString()
+                           );
+                    }
+
+                    DataGridViewButtonColumn btn_update = new DataGridViewButtonColumn();
+                    dgv_users.Columns.Add(btn_update);
+                    btn_update.HeaderText = "";
+                    btn_update.Text = "Update";
+                    btn_update.Name = "btn_update";
+                    btn_update.FlatStyle = FlatStyle.Flat;
+                    btn_update.UseColumnTextForButtonValue = true;
+
+                    DataGridViewButtonColumn btn_delete = new DataGridViewButtonColumn();
+                    dgv_users.Columns.Add(btn_delete);
+                    btn_delete.HeaderText = "";
+                    btn_delete.Text = "Delete";
+                    btn_delete.Name = "btn_delete";
+                    btn_delete.FlatStyle = FlatStyle.Flat;
+                    btn_delete.UseColumnTextForButtonValue = true;
                 }
-
-                DataGridViewButtonColumn btn_update = new DataGridViewButtonColumn();               
-                dgv_users.Columns.Add(btn_update);
-                btn_update.HeaderText = "";
-                btn_update.Text = "Update";
-                btn_update.Name = "btn_update";
-                btn_update.FlatStyle = FlatStyle.Flat;
-                btn_update.UseColumnTextForButtonValue = true;
-
-                DataGridViewButtonColumn btn_delete = new DataGridViewButtonColumn();
-                dgv_users.Columns.Add(btn_delete);
-                btn_delete.HeaderText = "";
-                btn_delete.Text = "Delete";
-                btn_delete.Name = "btn_delete";
-                btn_delete.FlatStyle = FlatStyle.Flat;
-                btn_delete.UseColumnTextForButtonValue = true;
+                else
+                {
+                    popAlert("No Data", Alert.enmType.Info);
+                }
+                con.Close();
             }
-            else
+            catch(Exception ex)
             {
-                popAlert("SQL Error", Alert.enmType.Info);
+                MessageBox.Show(ex.Message);
             }
-            con.Close();
+           
         }
 
         private void dgv_users_CellContentClick(object sender, DataGridViewCellEventArgs e)

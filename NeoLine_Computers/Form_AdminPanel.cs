@@ -18,6 +18,9 @@ namespace NeoLine_Computers
         public Form_AdminPanel()
         {
             InitializeComponent();
+            pnl_active.Height = btn_users.Height;
+            pnl_active.Top = btn_users.Top;
+            usersControl1.BringToFront();
         }
 
         public void popAlert(string msg, Alert.enmType type)
@@ -77,12 +80,19 @@ namespace NeoLine_Computers
         {
             pnl_active.Height = btn_users.Height;
             pnl_active.Top = btn_users.Top;
-            //usersControl1.BringToFront();
+            usersControl1.BringToFront();
         }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_Tables_Click(object sender, EventArgs e)
+        {
+            pnl_active.Height = btn_Tables.Height;
+            pnl_active.Top = btn_Tables.Top;
+            tableControl1.BringToFront();
         }
     }
 }

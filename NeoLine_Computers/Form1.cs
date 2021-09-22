@@ -113,7 +113,7 @@ namespace NeoLine_Computers
             }
         }
 
-        public void insert()
+       /* public void insert()
         {
             try
             {
@@ -130,7 +130,7 @@ namespace NeoLine_Computers
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        }*/
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {

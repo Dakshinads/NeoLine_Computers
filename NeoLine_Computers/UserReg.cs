@@ -20,7 +20,7 @@ namespace NeoLine_Computers
         MD5Encryption md5 = new MD5Encryption();
         DBConnection dbConnect = new DBConnection();
 
-        // type 1 = save,  type 2 = update 
+        // type 1 = save,  type 2 = update, type 3 =update user
         public UserReg( int type)
         {
             InitializeComponent();

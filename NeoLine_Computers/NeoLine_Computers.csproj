@@ -164,6 +164,12 @@
     <Compile Include="BillControl.Designer.cs">
       <DependentUpon>BillControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CatReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatReg.Designer.cs">
+      <DependentUpon>CatReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConfirmationPopup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,12 @@
     <Compile Include="Form_Dashboard.Designer.cs">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemReg.Designer.cs">
+      <DependentUpon>ItemReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="MD5Encryption.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -214,6 +226,12 @@
     </Compile>
     <Compile Include="StockControl.Designer.cs">
       <DependentUpon>StockControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TableControl.Designer.cs">
+      <DependentUpon>TableControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserDetails.cs" />
     <Compile Include="UserReg.cs">
@@ -240,6 +258,9 @@
     <EmbeddedResource Include="BillControl.resx">
       <DependentUpon>BillControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CatReg.resx">
+      <DependentUpon>CatReg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfirmationPopup.resx">
       <DependentUpon>ConfirmationPopup.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +276,9 @@
     <EmbeddedResource Include="Form_Dashboard.resx">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ItemReg.resx">
+      <DependentUpon>ItemReg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -266,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StockControl.resx">
       <DependentUpon>StockControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableControl.resx">
+      <DependentUpon>TableControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserReg.resx">
       <DependentUpon>UserReg.cs</DependentUpon>
