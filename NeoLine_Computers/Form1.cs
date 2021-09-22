@@ -13,7 +13,7 @@ namespace NeoLine_Computers
 {
     public partial class login_form : Form
     {
-
+        
         private bool dragging = false;
         private Point startPoint = new Point(0, 0);
         private bool showPassword = false;
@@ -27,6 +27,7 @@ namespace NeoLine_Computers
         {
             InitializeComponent();
             con = dbConnect.getConn();
+
         }
 
 

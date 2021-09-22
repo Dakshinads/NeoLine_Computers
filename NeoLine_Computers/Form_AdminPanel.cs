@@ -94,5 +94,12 @@ namespace NeoLine_Computers
             pnl_active.Top = btn_Tables.Top;
             tableControl1.BringToFront();
         }
+
+        private void btn_stockIn_Click(object sender, EventArgs e)
+        {
+            pnl_active.Height = btn_stockIn.Height;
+            pnl_active.Top = btn_stockIn.Top;
+            stockInControl1.BringToFront();
+        }
     }
 }

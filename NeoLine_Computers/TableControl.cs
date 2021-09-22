@@ -443,5 +443,6 @@ namespace NeoLine_Computers
             txt_search.Text = "";
             refreshGridI();
         }
+
     }
 }

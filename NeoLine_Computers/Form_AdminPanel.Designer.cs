@@ -43,8 +43,9 @@ namespace NeoLine_Computers
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.usersControl1 = new NeoLine_Computers.UsersControl();
             this.tableControl1 = new NeoLine_Computers.TableControl();
+            this.usersControl1 = new NeoLine_Computers.UsersControl();
+            this.stockInControl1 = new NeoLine_Computers.StockInControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -103,6 +104,7 @@ namespace NeoLine_Computers
             this.btn_stockIn.Text = "Stock In";
             this.btn_stockIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_stockIn.UseVisualStyleBackColor = false;
+            this.btn_stockIn.Click += new System.EventHandler(this.btn_stockIn_Click);
             // 
             // btn_Tables
             // 
@@ -240,6 +242,7 @@ namespace NeoLine_Computers
             // panel4
             // 
             this.panel4.AutoSize = true;
+            this.panel4.Controls.Add(this.stockInControl1);
             this.panel4.Controls.Add(this.tableControl1);
             this.panel4.Controls.Add(this.usersControl1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -247,6 +250,14 @@ namespace NeoLine_Computers
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1377, 798);
             this.panel4.TabIndex = 3;
+            // 
+            // tableControl1
+            // 
+            this.tableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableControl1.Location = new System.Drawing.Point(0, 0);
+            this.tableControl1.Name = "tableControl1";
+            this.tableControl1.Size = new System.Drawing.Size(1377, 798);
+            this.tableControl1.TabIndex = 1;
             // 
             // usersControl1
             // 
@@ -257,13 +268,14 @@ namespace NeoLine_Computers
             this.usersControl1.Size = new System.Drawing.Size(1377, 798);
             this.usersControl1.TabIndex = 0;
             // 
-            // tableControl1
+            // stockInControl1
             // 
-            this.tableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableControl1.Location = new System.Drawing.Point(0, 0);
-            this.tableControl1.Name = "tableControl1";
-            this.tableControl1.Size = new System.Drawing.Size(1377, 798);
-            this.tableControl1.TabIndex = 1;
+            this.stockInControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stockInControl1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stockInControl1.Location = new System.Drawing.Point(0, 0);
+            this.stockInControl1.Name = "stockInControl1";
+            this.stockInControl1.Size = new System.Drawing.Size(1377, 798);
+            this.stockInControl1.TabIndex = 2;
             // 
             // Form_AdminPanel
             // 
@@ -311,5 +323,6 @@ namespace NeoLine_Computers
         private System.Windows.Forms.Panel panel4;
         private UsersControl usersControl1;
         private TableControl tableControl1;
+        private StockInControl stockInControl1;
     }
 }
