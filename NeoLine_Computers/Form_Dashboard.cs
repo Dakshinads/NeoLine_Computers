@@ -37,7 +37,7 @@ namespace NeoLine_Computers
             btn_profileSetting.Location = new Point(lbl_welcome.Location.X+lbl_welcome.Width,6);
             pnl_active.Height = btn_dashboard.Height;
             pnl_active.Top = btn_dashboard.Top;
-            //dashboardControl1.BringToFront();
+            dashboardControl1.BringToFront();
 
         }
 
@@ -114,35 +114,44 @@ namespace NeoLine_Computers
         {
             pnl_active.Height = btn_dashboard.Height;
             pnl_active.Top = btn_dashboard.Top;
-           // dashboardControl1.BringToFront();
+            dashboardControl1.BringToFront();
         }
 
         private void btn_stock_Click(object sender, EventArgs e)
         {
             pnl_active.Height = btn_stock.Height;
             pnl_active.Top = btn_stock.Top;
-          //  stockControl1.BringToFront();
+            stockControl1.BringToFront();
+            stockControl1.refreshGrid();
         }
 
         private void btn_bill_Click(object sender, EventArgs e)
         {
             pnl_active.Height = btn_bill.Height;
             pnl_active.Top = btn_bill.Top;
-          //  billControl1.BringToFront();
+            billControl1.BringToFront();
         }
 
         private void btn_warrantyChecker_Click(object sender, EventArgs e)
         {
             pnl_active.Height = btn_warrantyChecker.Height;
             pnl_active.Top = btn_warrantyChecker.Top;
-          //  warrantyCheckerControl1.BringToFront();
+            warrantyCheckerControl1.BringToFront();
         }
 
         private void btn_report_Click(object sender, EventArgs e)
         {
-            pnl_active.Height = btn_report.Height;
-            pnl_active.Top = btn_report.Top;
-          //  reporControl1.BringToFront();
+            if(userrole =="Admin" || userrole == "Manager")
+            {
+                pnl_active.Height = btn_report.Height;
+                pnl_active.Top = btn_report.Top;
+                reporControl1.BringToFront();
+            }
+            else
+            {
+                popAlert("You cannot access to the report", Alert.enmType.Delete);
+            }
+           
         }
 
         private void btn_adminPanel_Click(object sender, EventArgs e)
@@ -155,9 +164,7 @@ namespace NeoLine_Computers
             else
             {
                 popAlert("You cannot access to admin panel", Alert.enmType.Delete);
-            }
-           
-            // view admin panel
+            }           
         }
 
         public void btn_profileSetting_Click(object sender, EventArgs e)

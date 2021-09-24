@@ -29,6 +29,7 @@ namespace NeoLine_Computers
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_active = new System.Windows.Forms.Panel();
             this.btn_adminPanel = new System.Windows.Forms.Button();
@@ -46,10 +47,16 @@ namespace NeoLine_Computers
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.reporControl1 = new NeoLine_Computers.ReporControl();
+            this.warrantyCheckerControl1 = new NeoLine_Computers.WarrantyCheckerControl();
+            this.billControl1 = new NeoLine_Computers.BillControl();
+            this.stockControl1 = new NeoLine_Computers.StockControl();
+            this.dashboardControl1 = new NeoLine_Computers.DashboardControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -296,11 +303,57 @@ namespace NeoLine_Computers
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.reporControl1);
+            this.panel4.Controls.Add(this.warrantyCheckerControl1);
+            this.panel4.Controls.Add(this.billControl1);
+            this.panel4.Controls.Add(this.stockControl1);
+            this.panel4.Controls.Add(this.dashboardControl1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(232, 53);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1377, 791);
             this.panel4.TabIndex = 3;
+            // 
+            // reporControl1
+            // 
+            this.reporControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reporControl1.Location = new System.Drawing.Point(0, 0);
+            this.reporControl1.Name = "reporControl1";
+            this.reporControl1.Size = new System.Drawing.Size(1377, 791);
+            this.reporControl1.TabIndex = 4;
+            // 
+            // warrantyCheckerControl1
+            // 
+            this.warrantyCheckerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.warrantyCheckerControl1.Location = new System.Drawing.Point(0, 0);
+            this.warrantyCheckerControl1.Name = "warrantyCheckerControl1";
+            this.warrantyCheckerControl1.Size = new System.Drawing.Size(1377, 791);
+            this.warrantyCheckerControl1.TabIndex = 3;
+            // 
+            // billControl1
+            // 
+            this.billControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.billControl1.Location = new System.Drawing.Point(0, 0);
+            this.billControl1.Name = "billControl1";
+            this.billControl1.Size = new System.Drawing.Size(1377, 791);
+            this.billControl1.TabIndex = 2;
+            // 
+            // stockControl1
+            // 
+            this.stockControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stockControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stockControl1.Location = new System.Drawing.Point(0, 0);
+            this.stockControl1.Name = "stockControl1";
+            this.stockControl1.Size = new System.Drawing.Size(1377, 791);
+            this.stockControl1.TabIndex = 1;
+            // 
+            // dashboardControl1
+            // 
+            this.dashboardControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboardControl1.Location = new System.Drawing.Point(0, 0);
+            this.dashboardControl1.Name = "dashboardControl1";
+            this.dashboardControl1.Size = new System.Drawing.Size(1377, 791);
+            this.dashboardControl1.TabIndex = 0;
             // 
             // Form_Dashboard
             // 
@@ -313,6 +366,7 @@ namespace NeoLine_Computers
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Dashboard";
@@ -323,6 +377,7 @@ namespace NeoLine_Computers
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -346,5 +401,10 @@ namespace NeoLine_Computers
         private System.Windows.Forms.Button btn_profileSetting;
         private System.Windows.Forms.Panel pnl_active;
         private System.Windows.Forms.Panel panel4;
+        private ReporControl reporControl1;
+        private WarrantyCheckerControl warrantyCheckerControl1;
+        private BillControl billControl1;
+        private StockControl stockControl1;
+        private DashboardControl dashboardControl1;
     }
 }

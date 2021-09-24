@@ -427,10 +427,10 @@ namespace NeoLine_Computers
                     btn_deletei.FlatStyle = FlatStyle.Flat;
                     btn_deletei.UseColumnTextForButtonValue = true;
                 }
-                else
+               /* else
                 {
                     popAlert("No Data", Alert.enmType.Info);
-                }
+                }*/
                 con.Close();
             }
             catch(Exception ex)

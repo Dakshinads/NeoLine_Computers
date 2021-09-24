@@ -67,7 +67,7 @@ namespace NeoLine_Computers
         }
 
         private void btn_close_Click(object sender, EventArgs e)
-        {
+        {            
             this.Close();
         }
 
@@ -101,5 +101,6 @@ namespace NeoLine_Computers
             pnl_active.Top = btn_stockIn.Top;
             stockInControl1.BringToFront();
         }
+
     }
 }

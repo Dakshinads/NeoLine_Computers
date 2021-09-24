@@ -163,9 +163,7 @@ namespace NeoLine_Computers
                 reader = cmd.ExecuteReader();
                 popAlert("Successully saved", Alert.enmType.Success);           
                 con.Close();
-                this.Hide();
-
-
+                this.Hide();                
             }
             catch (Exception ex)
             {
@@ -185,8 +183,6 @@ namespace NeoLine_Computers
                 reader = cmd.ExecuteReader();
                 popAlert("Successully updated", Alert.enmType.Update);
                 con.Close();
-                UsersControl usc = new UsersControl();
-                usc.refreshGrid();
                 this.Hide();
             }
             catch (Exception ex)

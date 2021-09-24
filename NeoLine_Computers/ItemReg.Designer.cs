@@ -44,12 +44,12 @@ namespace NeoLine_Computers
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_formname = new System.Windows.Forms.Label();
             this.btn_close = new System.Windows.Forms.Button();
             this.txt_name = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_description = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbl_formname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_price = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -73,6 +73,16 @@ namespace NeoLine_Computers
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
+            // lbl_formname
+            // 
+            this.lbl_formname.AutoSize = true;
+            this.lbl_formname.Font = new System.Drawing.Font("Century Gothic", 13.74545F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_formname.Location = new System.Drawing.Point(18, 9);
+            this.lbl_formname.Name = "lbl_formname";
+            this.lbl_formname.Size = new System.Drawing.Size(72, 25);
+            this.lbl_formname.TabIndex = 6;
+            this.lbl_formname.Text = "name";
             // 
             // btn_close
             // 
@@ -255,16 +265,6 @@ namespace NeoLine_Computers
             this.label4.Size = new System.Drawing.Size(97, 21);
             this.label4.TabIndex = 8;
             this.label4.Text = "Description";
-            // 
-            // lbl_formname
-            // 
-            this.lbl_formname.AutoSize = true;
-            this.lbl_formname.Font = new System.Drawing.Font("Century Gothic", 13.74545F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_formname.Location = new System.Drawing.Point(18, 9);
-            this.lbl_formname.Name = "lbl_formname";
-            this.lbl_formname.Size = new System.Drawing.Size(72, 25);
-            this.lbl_formname.TabIndex = 6;
-            this.lbl_formname.Text = "name";
             // 
             // label1
             // 
@@ -515,6 +515,7 @@ namespace NeoLine_Computers
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ItemReg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ItemReg";
