@@ -34,7 +34,6 @@ namespace NeoLine_Computers
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_users = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.btn_addNew = new System.Windows.Forms.Button();
             this.dgvcol_nic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvcol_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvcol_dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +42,7 @@ namespace NeoLine_Computers
             this.dgvcol_contactno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvcol_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvcol_username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_addNew = new System.Windows.Forms.Button();
             this.btn_refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.SuspendLayout();
@@ -130,20 +130,6 @@ namespace NeoLine_Computers
             this.dgv_users.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_users.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_users_CellContentClick);
             // 
-            // btn_addNew
-            // 
-            this.btn_addNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(132)))), ((int)(((byte)(232)))));
-            this.btn_addNew.FlatAppearance.BorderSize = 0;
-            this.btn_addNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_addNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_addNew.Location = new System.Drawing.Point(12, 745);
-            this.btn_addNew.Name = "btn_addNew";
-            this.btn_addNew.Size = new System.Drawing.Size(105, 36);
-            this.btn_addNew.TabIndex = 2;
-            this.btn_addNew.Text = "Add New";
-            this.btn_addNew.UseVisualStyleBackColor = false;
-            this.btn_addNew.Click += new System.EventHandler(this.btn_addNew_Click);
-            // 
             // dgvcol_nic
             // 
             this.dgvcol_nic.HeaderText = "NIC";
@@ -200,6 +186,20 @@ namespace NeoLine_Computers
             this.dgvcol_username.Name = "dgvcol_username";
             this.dgvcol_username.ReadOnly = true;
             // 
+            // btn_addNew
+            // 
+            this.btn_addNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(132)))), ((int)(((byte)(232)))));
+            this.btn_addNew.FlatAppearance.BorderSize = 0;
+            this.btn_addNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addNew.Location = new System.Drawing.Point(12, 745);
+            this.btn_addNew.Name = "btn_addNew";
+            this.btn_addNew.Size = new System.Drawing.Size(105, 36);
+            this.btn_addNew.TabIndex = 2;
+            this.btn_addNew.Text = "Add New";
+            this.btn_addNew.UseVisualStyleBackColor = false;
+            this.btn_addNew.Click += new System.EventHandler(this.btn_addNew_Click);
+            // 
             // btn_refresh
             // 
             this.btn_refresh.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -214,6 +214,7 @@ namespace NeoLine_Computers
             this.btn_refresh.TabIndex = 3;
             this.btn_refresh.UseVisualStyleBackColor = false;
             this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            this.btn_refresh.MouseHover += new System.EventHandler(this.btn_refresh_MouseHover);
             // 
             // UsersControl
             // 

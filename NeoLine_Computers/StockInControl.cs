@@ -230,11 +230,17 @@ namespace NeoLine_Computers
                         " VALUES(" + Convert.ToInt32(txt_grnno.Text) + ",'" + dt.ToString("HH:mm:ss") + "','" + dt.ToString("yyyy-MM-dd") + "'," +
                         "" + Convert.ToInt32(dgv_stockin.Rows[i].Cells[2].Value) + ","+ Convert.ToInt32(dgv_stockin.Rows[i].Cells[3].Value) + "," +
                         "'"+txt_description.Text+"',"+Convert.ToInt32(cmb_supplierName.SelectedValue)+","+ Convert.ToInt32(dgv_stockin.Rows[i].Cells[0].Value) + " )";
-                        MessageBox.Show(qry);
                         MySqlDataReader reader;
                         con.Open();
                         MySqlCommand cmd = new MySqlCommand(qry, con);
                         reader = cmd.ExecuteReader();                        
+                        con.Close();
+
+                        string updateqry ="UPDATE item SET Stock= Stock + "+ Convert.ToInt32(dgv_stockin.Rows[i].Cells[2].Value) +" WHERE Item_ID = "+ Convert.ToInt32(dgv_stockin.Rows[i].Cells[0].Value);
+                        MySqlDataReader reader1;
+                        con.Open();
+                        MySqlCommand cmd1 = new MySqlCommand(updateqry, con);
+                        reader1 = cmd1.ExecuteReader();
                         con.Close();
                     }
                     popAlert("Stock Successully Updated", Alert.enmType.Success);

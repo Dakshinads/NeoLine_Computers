@@ -15,6 +15,7 @@ namespace NeoLine_Computers
     {
         MySqlConnection con;
         DBConnection dbConnect = new DBConnection();
+        ToolTip toolTip = new ToolTip();
         public TableControl()
         {
             InitializeComponent();
@@ -444,5 +445,22 @@ namespace NeoLine_Computers
             refreshGridI();
         }
 
+        private void btn_refreshC_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.ShowAlways = true;
+            toolTip.SetToolTip(btn_refreshC, "Reresh Grid");
+        }
+
+        private void btn_refereshI_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.ShowAlways = true;
+            toolTip.SetToolTip(btn_refereshI, "Reresh Grid");
+        }
+
+        private void btn_refreshS_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.ShowAlways = true;
+            toolTip.SetToolTip(btn_refreshS, "Reresh Grid");
+        }
     }
 }

@@ -15,6 +15,7 @@ namespace NeoLine_Computers
     {
         MySqlConnection con;
         DBConnection dbConnect = new DBConnection();
+        ToolTip toolTip = new ToolTip();
         public UsersControl()
         {
             InitializeComponent();
@@ -153,6 +154,12 @@ namespace NeoLine_Computers
             dgv_users.Columns.RemoveAt(9);
             dgv_users.Columns.RemoveAt(8);
             loadgrid();
+        }
+
+        private void btn_refresh_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.ShowAlways = true;
+            toolTip.SetToolTip(btn_refresh, "Reresh Grid");
         }
     }
 }
