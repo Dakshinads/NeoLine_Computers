@@ -105,3 +105,4 @@ D:\BIT\Level 1 Semester 2\ICT Project\NeoLine_Computers\NeoLine_Computers\obj\De
 D:\BIT\Level 1 Semester 2\ICT Project\NeoLine_Computers\NeoLine_Computers\obj\Debug\NeoLine_Computers.SupReg.resources
 D:\BIT\Level 1 Semester 2\ICT Project\NeoLine_Computers\NeoLine_Computers\obj\Debug\NeoLine_Computers.StockInControl.resources
 D:\BIT\Level 1 Semester 2\ICT Project\NeoLine_Computers\NeoLine_Computers\obj\Debug\NeoLine_Computers.csproj.AssemblyReference.cache
+D:\BIT\Level 1 Semester 2\ICT Project\NeoLine_Computers\NeoLine_Computers\obj\Debug\NeoLine_Computers.Form_Invoice.resources

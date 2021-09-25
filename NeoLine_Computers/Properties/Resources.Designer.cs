@@ -273,6 +273,16 @@ namespace NeoLine_Computers.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_91___Copy1 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot_91 - Copy1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap settings_48px {
             get {
                 object obj = ResourceManager.GetObject("settings_48px", resourceCulture);

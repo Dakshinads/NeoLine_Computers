@@ -38,7 +38,7 @@ namespace NeoLine_Computers
             try
             {
                 int grnno = 0;
-                string query = "SELECT GRN_ID FROM grn ORDER BY GRN_ID DESC ";
+                string query = "SELECT GRN_ID FROM grn ORDER BY GRN_ID DESC LIMIT 1 ";
                 MySqlDataReader reader;
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 con.Open();
@@ -128,8 +128,7 @@ namespace NeoLine_Computers
                     int ignorme;
                     if (int.TryParse(txt_qty.Text, out ignorme) && int.TryParse(txt_price.Text, out ignorme))
                     {
-                        /*DataGridViewButtonColumn btn_updatei = new DataGridViewButtonColumn();
-                        dgv_Item.Columns.Add(btn_updatei);*/
+
 
                         dgv_colAction.HeaderText = "";
                         dgv_colAction.Text = "Remove";
