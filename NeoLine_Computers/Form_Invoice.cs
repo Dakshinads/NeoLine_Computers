@@ -55,12 +55,9 @@ namespace NeoLine_Computers
         {
             try
             {
-                int grnno = 0;
                 string query = "SELECT i.Invoice_ID, i.Time, i.Date, i.Qty, i.Selling_Price, i.Warranty_Period, i.Discount, i.Type ,i.Service_description," +
                     " it.Name as iName, c.Name as cName,  c.Contact_No FROM `invoice` as i INNER JOIN customer c ON i.Customer_ID=c.Customer_ID LEFT JOIN item it ON i.Item_ID=it.Item_ID" +
                     " WHERE Invoice_ID="+invoiceNo+"";
-                Console.WriteLine(query);
-                MessageBox.Show(query);
                 MySqlDataReader reader;
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 con.Open();
