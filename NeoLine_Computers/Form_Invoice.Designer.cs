@@ -49,16 +49,18 @@ namespace NeoLine_Computers
             this.lbl_customerName = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_contactNo = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgv_list = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.des = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.warranty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_Total = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_list)).BeginInit();
             this.SuspendLayout();
@@ -164,7 +166,7 @@ namespace NeoLine_Computers
             this.lbl_invoiceno.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl_invoiceno.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_invoiceno.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbl_invoiceno.Location = new System.Drawing.Point(683, 180);
+            this.lbl_invoiceno.Location = new System.Drawing.Point(591, 180);
             this.lbl_invoiceno.Name = "lbl_invoiceno";
             this.lbl_invoiceno.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_invoiceno.Size = new System.Drawing.Size(6, 20);
@@ -196,7 +198,7 @@ namespace NeoLine_Computers
             this.lbl_date.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl_date.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_date.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbl_date.Location = new System.Drawing.Point(683, 206);
+            this.lbl_date.Location = new System.Drawing.Point(591, 206);
             this.lbl_date.Name = "lbl_date";
             this.lbl_date.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_date.Size = new System.Drawing.Size(6, 20);
@@ -228,7 +230,7 @@ namespace NeoLine_Computers
             this.lbl_time.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl_time.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_time.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbl_time.Location = new System.Drawing.Point(683, 232);
+            this.lbl_time.Location = new System.Drawing.Point(591, 232);
             this.lbl_time.Name = "lbl_time";
             this.lbl_time.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_time.Size = new System.Drawing.Size(6, 20);
@@ -330,20 +332,20 @@ namespace NeoLine_Computers
             this.dis,
             this.amount});
             this.dgv_list.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgv_list.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 8F);
+            this.dgv_list.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgv_list.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_list.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgv_list.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgv_list.CurrentTheme.BackColor = System.Drawing.Color.White;
             this.dgv_list.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgv_list.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dgv_list.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.dgv_list.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.dgv_list.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgv_list.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.dgv_list.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_list.CurrentTheme.Name = null;
             this.dgv_list.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_list.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 8F);
+            this.dgv_list.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgv_list.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_list.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgv_list.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -370,53 +372,6 @@ namespace NeoLine_Computers
             this.dgv_list.Size = new System.Drawing.Size(674, 456);
             this.dgv_list.TabIndex = 8;
             this.dgv_list.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // des
-            // 
-            this.des.HeaderText = "Description";
-            this.des.MinimumWidth = 6;
-            this.des.Name = "des";
-            this.des.ReadOnly = true;
-            // 
-            // warranty
-            // 
-            this.warranty.FillWeight = 18.84819F;
-            this.warranty.HeaderText = "Warranty Period";
-            this.warranty.MinimumWidth = 6;
-            this.warranty.Name = "warranty";
-            this.warranty.ReadOnly = true;
-            // 
-            // qty
-            // 
-            this.qty.FillWeight = 18.84819F;
-            this.qty.HeaderText = "QTY";
-            this.qty.MinimumWidth = 6;
-            this.qty.Name = "qty";
-            this.qty.ReadOnly = true;
-            // 
-            // price
-            // 
-            this.price.FillWeight = 18.84819F;
-            this.price.HeaderText = "Price (Rs.)";
-            this.price.MinimumWidth = 6;
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            // 
-            // dis
-            // 
-            this.dis.FillWeight = 18.84819F;
-            this.dis.HeaderText = "Discount";
-            this.dis.MinimumWidth = 6;
-            this.dis.Name = "dis";
-            this.dis.ReadOnly = true;
-            // 
-            // amount
-            // 
-            this.amount.FillWeight = 18.84819F;
-            this.amount.HeaderText = "Amount";
-            this.amount.MinimumWidth = 6;
-            this.amount.Name = "amount";
-            this.amount.ReadOnly = true;
             // 
             // bunifuLabel9
             // 
@@ -466,6 +421,88 @@ namespace NeoLine_Computers
             this.panel2.Size = new System.Drawing.Size(170, 2);
             this.panel2.TabIndex = 9;
             // 
+            // des
+            // 
+            this.des.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.des.FillWeight = 163.7319F;
+            this.des.HeaderText = "Description";
+            this.des.MinimumWidth = 6;
+            this.des.Name = "des";
+            this.des.ReadOnly = true;
+            this.des.Width = 135;
+            // 
+            // warranty
+            // 
+            this.warranty.FillWeight = 6.101812F;
+            this.warranty.HeaderText = "Warranty Period";
+            this.warranty.MinimumWidth = 6;
+            this.warranty.Name = "warranty";
+            this.warranty.ReadOnly = true;
+            // 
+            // qty
+            // 
+            this.qty.FillWeight = 6.101812F;
+            this.qty.HeaderText = "QTY";
+            this.qty.MinimumWidth = 6;
+            this.qty.Name = "qty";
+            this.qty.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.FillWeight = 6.101812F;
+            this.price.HeaderText = "Price (Rs.)";
+            this.price.MinimumWidth = 6;
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
+            // dis
+            // 
+            this.dis.FillWeight = 6.101812F;
+            this.dis.HeaderText = "Discount";
+            this.dis.MinimumWidth = 6;
+            this.dis.Name = "dis";
+            this.dis.ReadOnly = true;
+            // 
+            // amount
+            // 
+            this.amount.FillWeight = 6.101812F;
+            this.amount.HeaderText = "Amount (Rs.)";
+            this.amount.MinimumWidth = 6;
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            // 
+            // bunifuLabel11
+            // 
+            this.bunifuLabel11.AllowParentOverrides = false;
+            this.bunifuLabel11.AutoEllipsis = false;
+            this.bunifuLabel11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel11.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel11.Location = new System.Drawing.Point(483, 753);
+            this.bunifuLabel11.Name = "bunifuLabel11";
+            this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel11.Size = new System.Drawing.Size(98, 20);
+            this.bunifuLabel11.TabIndex = 0;
+            this.bunifuLabel11.Text = "Total Amount";
+            this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel11.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbl_Total
+            // 
+            this.lbl_Total.AllowParentOverrides = false;
+            this.lbl_Total.AutoEllipsis = false;
+            this.lbl_Total.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbl_Total.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbl_Total.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lbl_Total.Location = new System.Drawing.Point(608, 753);
+            this.lbl_Total.Name = "lbl_Total";
+            this.lbl_Total.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_Total.Size = new System.Drawing.Size(12, 20);
+            this.lbl_Total.TabIndex = 0;
+            this.lbl_Total.Text = "...";
+            this.lbl_Total.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_Total.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // Form_Invoice
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -480,12 +517,14 @@ namespace NeoLine_Computers
             this.Controls.Add(this.lbl_time);
             this.Controls.Add(this.lbl_date);
             this.Controls.Add(this.lbl_invoiceno);
+            this.Controls.Add(this.lbl_Total);
             this.Controls.Add(this.bunifuLabel7);
             this.Controls.Add(this.bunifuLabel5);
             this.Controls.Add(this.lbl_contactNo);
             this.Controls.Add(this.lbl_customerName);
             this.Controls.Add(this.bunifuLabel10);
             this.Controls.Add(this.bunifuLabel9);
+            this.Controls.Add(this.bunifuLabel11);
             this.Controls.Add(this.bunifuLabel8);
             this.Controls.Add(this.bunifuLabel2);
             this.Controls.Add(this.bunifuLabel6);
@@ -533,5 +572,7 @@ namespace NeoLine_Computers
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn dis;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_Total;
     }
 }

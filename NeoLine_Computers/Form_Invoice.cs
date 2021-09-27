@@ -22,7 +22,7 @@ namespace NeoLine_Computers
         {
             InitializeComponent();
             con = dbConnect.getConn();
-            //showDetails(invoiceNo);
+            showDetails(invoiceNo);
             
         }
 
@@ -56,18 +56,51 @@ namespace NeoLine_Computers
             try
             {
                 int grnno = 0;
-                string query = "SELECT GRN_ID FROM grn ORDER BY GRN_ID DESC LIMIT 1 ";
+                string query = "SELECT i.Invoice_ID, i.Time, i.Date, i.Qty, i.Selling_Price, i.Warranty_Period, i.Discount, i.Type ,i.Service_description," +
+                    " it.Name as iName, c.Name as cName,  c.Contact_No FROM `invoice` as i INNER JOIN customer c ON i.Customer_ID=c.Customer_ID LEFT JOIN item it ON i.Item_ID=it.Item_ID" +
+                    " WHERE Invoice_ID="+invoiceNo+"";
+                Console.WriteLine(query);
+                MessageBox.Show(query);
                 MySqlDataReader reader;
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 con.Open();
                 reader = cmd.ExecuteReader();
+                int total = 0;
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
+                        lbl_invoiceno.Text = reader["Invoice_ID"].ToString();
+                        lbl_date.Text = reader["Date"].ToString();
+                        lbl_time.Text = reader["Time"].ToString();
+                        lbl_customerName.Text = reader["cName"].ToString();
+                        lbl_contactNo.Text= reader["Contact_No"].ToString();
 
-                        grnno = Convert.ToInt32(reader["GRN_ID"]);
+                        if (reader["Service_description"].ToString().Length<=0){
+                            dgv_list.Rows.Add(
+                                reader["iName"].ToString(),
+                                reader["Warranty_Period"].ToString(),
+                                reader["Qty"].ToString(),
+                                reader["Selling_Price"].ToString(),
+                                reader["Discount"].ToString(),
+                                (Convert.ToInt32(reader["Qty"])* Convert.ToInt32(reader["Selling_Price"]))- Convert.ToInt32(reader["Discount"])
+                                );
+                            total += (Convert.ToInt32(reader["Qty"]) * Convert.ToInt32(reader["Selling_Price"])) - Convert.ToInt32(reader["Discount"]);
+                        }
+                        else
+                        {
+                            dgv_list.Rows.Add(
+                                reader["Service_description"].ToString(),
+                                "",
+                                "",
+                                reader["Selling_Price"].ToString(),
+                                "",
+                                reader["Selling_Price"].ToString()
+                                );
+                            total += Convert.ToInt32(reader["Selling_Price"]);
+                        }
                     }
+                    lbl_Total.Text = total.ToString();
                 }
                 con.Close();
             }

@@ -464,9 +464,9 @@ namespace NeoLine_Computers
                                     }                                    
                                 }
                                 popAlert("Invoice details Saved Successfully", Alert.enmType.Success);
+                                Form_Invoice frmin = new Form_Invoice(Convert.ToInt32(txt_invoiceno.Text));
                                 cancelall();
                                 getInvoiceNo();
-                                Form_Invoice frmin = new Form_Invoice(Convert.ToInt32(txt_invoiceno.Text));
                                 frmin.Show();
 
                             }
