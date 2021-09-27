@@ -115,6 +115,7 @@ namespace NeoLine_Computers
             pnl_active.Height = btn_dashboard.Height;
             pnl_active.Top = btn_dashboard.Top;
             dashboardControl1.BringToFront();
+            dashboardControl1.showChart();
         }
 
         private void btn_stock_Click(object sender, EventArgs e)
