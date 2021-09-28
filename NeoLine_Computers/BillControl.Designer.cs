@@ -81,14 +81,6 @@ namespace NeoLine_Computers
             this.label4 = new System.Windows.Forms.Label();
             this.txt_contactno = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dgv_list = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.dgvcol_itemid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_colItemname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_colwarrantyPeriod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_colQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_colCostPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_coldiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_colvalue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_colAction = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.btn_clear = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_Add = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -116,6 +108,14 @@ namespace NeoLine_Computers
             this.lbl_totvalue = new System.Windows.Forms.Label();
             this.btn_cancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_showinvoice = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.dgvcol_itemid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_colItemname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_colwarrantyPeriod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_colQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_colCostPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_coldiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_colvalue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_colAction = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_list)).BeginInit();
             this.bunifuGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -455,62 +455,6 @@ namespace NeoLine_Computers
             this.dgv_list.TabIndex = 15;
             this.dgv_list.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_list.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_stockin_CellContentClick);
-            // 
-            // dgvcol_itemid
-            // 
-            this.dgvcol_itemid.HeaderText = "ID";
-            this.dgvcol_itemid.MinimumWidth = 6;
-            this.dgvcol_itemid.Name = "dgvcol_itemid";
-            this.dgvcol_itemid.ReadOnly = true;
-            // 
-            // dgv_colItemname
-            // 
-            this.dgv_colItemname.HeaderText = "Description";
-            this.dgv_colItemname.MinimumWidth = 6;
-            this.dgv_colItemname.Name = "dgv_colItemname";
-            this.dgv_colItemname.ReadOnly = true;
-            // 
-            // dgv_colwarrantyPeriod
-            // 
-            this.dgv_colwarrantyPeriod.HeaderText = "Warranty Period";
-            this.dgv_colwarrantyPeriod.MinimumWidth = 6;
-            this.dgv_colwarrantyPeriod.Name = "dgv_colwarrantyPeriod";
-            this.dgv_colwarrantyPeriod.ReadOnly = true;
-            // 
-            // dgv_colQty
-            // 
-            this.dgv_colQty.HeaderText = "Quantity";
-            this.dgv_colQty.MinimumWidth = 6;
-            this.dgv_colQty.Name = "dgv_colQty";
-            this.dgv_colQty.ReadOnly = true;
-            // 
-            // dgv_colCostPrice
-            // 
-            this.dgv_colCostPrice.HeaderText = "Price(Rs.)";
-            this.dgv_colCostPrice.MinimumWidth = 6;
-            this.dgv_colCostPrice.Name = "dgv_colCostPrice";
-            this.dgv_colCostPrice.ReadOnly = true;
-            // 
-            // dgv_coldiscount
-            // 
-            this.dgv_coldiscount.HeaderText = "Discount";
-            this.dgv_coldiscount.MinimumWidth = 6;
-            this.dgv_coldiscount.Name = "dgv_coldiscount";
-            this.dgv_coldiscount.ReadOnly = true;
-            // 
-            // dgv_colvalue
-            // 
-            this.dgv_colvalue.HeaderText = "Value (Rs)";
-            this.dgv_colvalue.MinimumWidth = 6;
-            this.dgv_colvalue.Name = "dgv_colvalue";
-            this.dgv_colvalue.ReadOnly = true;
-            // 
-            // dgv_colAction
-            // 
-            this.dgv_colAction.HeaderText = "Action";
-            this.dgv_colAction.MinimumWidth = 6;
-            this.dgv_colAction.Name = "dgv_colAction";
-            this.dgv_colAction.ReadOnly = true;
             // 
             // bunifuGroupBox1
             // 
@@ -1528,6 +1472,62 @@ namespace NeoLine_Computers
             this.btn_showinvoice.UseDefaultRadiusAndThickness = true;
             this.btn_showinvoice.Click += new System.EventHandler(this.btn_showinvoice_Click);
             // 
+            // dgvcol_itemid
+            // 
+            this.dgvcol_itemid.HeaderText = "ID";
+            this.dgvcol_itemid.MinimumWidth = 6;
+            this.dgvcol_itemid.Name = "dgvcol_itemid";
+            this.dgvcol_itemid.ReadOnly = true;
+            // 
+            // dgv_colItemname
+            // 
+            this.dgv_colItemname.HeaderText = "Description";
+            this.dgv_colItemname.MinimumWidth = 6;
+            this.dgv_colItemname.Name = "dgv_colItemname";
+            this.dgv_colItemname.ReadOnly = true;
+            // 
+            // dgv_colwarrantyPeriod
+            // 
+            this.dgv_colwarrantyPeriod.HeaderText = "Warranty Period";
+            this.dgv_colwarrantyPeriod.MinimumWidth = 6;
+            this.dgv_colwarrantyPeriod.Name = "dgv_colwarrantyPeriod";
+            this.dgv_colwarrantyPeriod.ReadOnly = true;
+            // 
+            // dgv_colQty
+            // 
+            this.dgv_colQty.HeaderText = "Quantity";
+            this.dgv_colQty.MinimumWidth = 6;
+            this.dgv_colQty.Name = "dgv_colQty";
+            this.dgv_colQty.ReadOnly = true;
+            // 
+            // dgv_colCostPrice
+            // 
+            this.dgv_colCostPrice.HeaderText = "Price(Rs.)";
+            this.dgv_colCostPrice.MinimumWidth = 6;
+            this.dgv_colCostPrice.Name = "dgv_colCostPrice";
+            this.dgv_colCostPrice.ReadOnly = true;
+            // 
+            // dgv_coldiscount
+            // 
+            this.dgv_coldiscount.HeaderText = "Discount";
+            this.dgv_coldiscount.MinimumWidth = 6;
+            this.dgv_coldiscount.Name = "dgv_coldiscount";
+            this.dgv_coldiscount.ReadOnly = true;
+            // 
+            // dgv_colvalue
+            // 
+            this.dgv_colvalue.HeaderText = "Amount (Rs.)";
+            this.dgv_colvalue.MinimumWidth = 6;
+            this.dgv_colvalue.Name = "dgv_colvalue";
+            this.dgv_colvalue.ReadOnly = true;
+            // 
+            // dgv_colAction
+            // 
+            this.dgv_colAction.HeaderText = "Action";
+            this.dgv_colAction.MinimumWidth = 6;
+            this.dgv_colAction.Name = "dgv_colAction";
+            this.dgv_colAction.ReadOnly = true;
+            // 
             // BillControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1590,6 +1590,13 @@ namespace NeoLine_Computers
         private System.Windows.Forms.ComboBox cmb_warrantyPeriod;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbl_totqty;
+        private System.Windows.Forms.Label lbl_totdiscount;
+        private System.Windows.Forms.Label lbl_totvalue;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_cancel;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_showinvoice;
+        private Bunifu.UI.WinForms.BunifuTextBox txt_qty;
+        private Bunifu.UI.WinForms.BunifuTextBox txt_discount;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvcol_itemid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_colItemname;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_colwarrantyPeriod;
@@ -1598,12 +1605,5 @@ namespace NeoLine_Computers
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_coldiscount;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_colvalue;
         private System.Windows.Forms.DataGridViewButtonColumn dgv_colAction;
-        private System.Windows.Forms.Label lbl_totqty;
-        private System.Windows.Forms.Label lbl_totdiscount;
-        private System.Windows.Forms.Label lbl_totvalue;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_cancel;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_showinvoice;
-        private Bunifu.UI.WinForms.BunifuTextBox txt_qty;
-        private Bunifu.UI.WinForms.BunifuTextBox txt_discount;
     }
 }

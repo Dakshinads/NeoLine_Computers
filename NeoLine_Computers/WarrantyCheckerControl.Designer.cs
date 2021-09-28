@@ -92,7 +92,7 @@ namespace NeoLine_Computers
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_list.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_list.ColumnHeadersHeight = 40;
             this.dgv_list.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvcol_description,
             this.dgvcol_war,
@@ -568,21 +568,21 @@ namespace NeoLine_Computers
             // 
             // dgvcol_price
             // 
-            this.dgvcol_price.HeaderText = "Price";
+            this.dgvcol_price.HeaderText = "Price (Rs.)";
             this.dgvcol_price.MinimumWidth = 6;
             this.dgvcol_price.Name = "dgvcol_price";
             this.dgvcol_price.ReadOnly = true;
             // 
             // dgvcol_dis
             // 
-            this.dgvcol_dis.HeaderText = "Discount";
+            this.dgvcol_dis.HeaderText = "Discount (Rs.)";
             this.dgvcol_dis.MinimumWidth = 6;
             this.dgvcol_dis.Name = "dgvcol_dis";
             this.dgvcol_dis.ReadOnly = true;
             // 
             // dgvcol_amount
             // 
-            this.dgvcol_amount.HeaderText = "Amount";
+            this.dgvcol_amount.HeaderText = "Amount (Rs.)";
             this.dgvcol_amount.MinimumWidth = 6;
             this.dgvcol_amount.Name = "dgvcol_amount";
             this.dgvcol_amount.ReadOnly = true;
