@@ -131,6 +131,7 @@ namespace NeoLine_Computers
             pnl_active.Height = btn_bill.Height;
             pnl_active.Top = btn_bill.Top;
             billControl1.BringToFront();
+            billControl1.loadCmbItemName();
         }
 
         private void btn_warrantyChecker_Click(object sender, EventArgs e)
