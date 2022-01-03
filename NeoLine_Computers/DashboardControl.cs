@@ -31,7 +31,7 @@ namespace NeoLine_Computers
             {
                 string query = "SELECT c.Name, SUM((i.Selling_Price * i.Qty)-i.Discount) as total FROM invoice as i " +
                     "INNER JOIN item as it ON i.Item_ID=it.Item_ID INNER JOIN category as c ON it.Category_ID = c.Category_ID " +
-                    "WHERE i.Date >= DATE(NOW()) - INTERVAL 7 DAY GROUP BY c.Category_ID";
+                    "WHERE i.Date >= DATE(NOW()) - INTERVAL 6 DAY GROUP BY c.Category_ID";
                 MySqlDataReader reader;
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 con.Open();
@@ -47,7 +47,7 @@ namespace NeoLine_Computers
                 con.Close();
 
                 string query1 = "SELECT i.Date, SUM((i.Selling_Price * i.Qty)-i.Discount) as total FROM invoice as i " +
-                    "WHERE i.Date >= DATE(NOW()) - INTERVAL 7 DAY GROUP BY i.Date ORDER BY i.Date asc; ";
+                    "WHERE i.Date >= DATE(NOW()) - INTERVAL 6 DAY GROUP BY i.Date ORDER BY i.Date asc; ";
                 MySqlDataReader reader1;
                 MySqlCommand cmd1 = new MySqlCommand(query1, con);
                 con.Open();

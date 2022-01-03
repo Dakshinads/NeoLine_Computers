@@ -114,25 +114,6 @@ namespace NeoLine_Computers
             }
         }
 
-       /* public void insert()
-        {
-            try
-            {
-                string qry = "INSERT INTO user(NIC,Name,DOB,Address,User_Role,Contact_No,Email,Username,Password)" +
-                    " VALUES('982890659V','Dakshina','1998-10-15','Gampaha','Admin', 0719015133,'dakshina@gmail.com','dakshina','e10adc3949ba59abbe56e057f20f883e')";
-                MySqlDataReader reader;
-                con.Open();
-                MySqlCommand cmd = new MySqlCommand(qry, con);
-                reader = cmd.ExecuteReader();
-                MessageBox.Show("Save Data");
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }*/
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true)

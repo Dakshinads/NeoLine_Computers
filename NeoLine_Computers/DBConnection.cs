@@ -27,23 +27,5 @@ namespace NeoLine_Computers
         {
             return conn;
         }
-
-       /* public MySqlDataReader ExecuteReader(string sql)
-        {
-            try
-            {
-                MySqlDataReader reader;
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                reader = cmd.ExecuteReader();
-                return reader;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return null;
-        }*/
-
-
     }
 }
