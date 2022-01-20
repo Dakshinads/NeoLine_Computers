@@ -65,20 +65,25 @@ namespace NeoLine_Computers
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+            login();
+        }
+
+        private void login()
+        {
             try
             {
-                if (txt_password.Text.Length>0 && txt_username.Text.Length > 0)
+                if (txt_password.Text.Length > 0 && txt_username.Text.Length > 0)
                 {
                     string username = txt_username.Text;
                     string password = md5.getMD5(txt_password.Text);
-                   
-                    
+
+
                     string query = "SELECT NIC,User_Role from user WHERE Username ='" + username + "' AND Password ='" + password + "'";
                     MySqlDataReader reader;
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     con.Open();
-                    reader = cmd.ExecuteReader();                    
-                    string role="";
+                    reader = cmd.ExecuteReader();
+                    string role = "";
                     String nic = "";
 
                     if (reader.HasRows)
@@ -92,8 +97,8 @@ namespace NeoLine_Computers
                         userD.setUserName(username);
                         userD.setUserRole(role);
                         userD.setnic(nic);
-                        
-                        Form_Dashboard dashboard = new Form_Dashboard(userD.getnic(),userD.getUserName(), userD.getUserRole());
+
+                        Form_Dashboard dashboard = new Form_Dashboard(userD.getnic(), userD.getUserName(), userD.getUserRole());
                         dashboard.Show();
                         this.Hide();
                     }
@@ -105,12 +110,12 @@ namespace NeoLine_Computers
                 }
                 else
                 {
-                    popAlert("Username or Password incorrect",Alert.enmType.Info);
+                    popAlert("Username or Password incorrect", Alert.enmType.Info);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message) ;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -132,5 +137,12 @@ namespace NeoLine_Computers
             al.showAlert(msg,type);
         }
 
+        private void txt_password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                login();
+            }
+        }
     }
 }

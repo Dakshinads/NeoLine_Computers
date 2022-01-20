@@ -229,6 +229,9 @@ namespace NeoLine_Computers
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             cancelall();
+            this.totalQty = 0;
+            this.totalvalue = 0;
+            this.totaldiscount = 0;
         }
 
 
@@ -464,6 +467,9 @@ namespace NeoLine_Computers
                                     }                                    
                                 }
                                 popAlert("Invoice details Saved Successfully", Alert.enmType.Success);
+                                this.totalQty = 0;
+                                this.totalvalue = 0;
+                                this.totaldiscount = 0;
                                 Form_Invoice frmin = new Form_Invoice(Convert.ToInt32(txt_invoiceno.Text));
                                 cancelall();
                                 getInvoiceNo();
